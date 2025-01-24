@@ -10,7 +10,7 @@ export default function Game() {
   const router = useRouter();
   const { id: gameId } = router.query;
   const [game, setGame] = useState(new Chess());
-  const [orientation, setOrientation] = useState('white');
+  const [orientation, setOrientation] = useState<'white' | 'black'>('white');
 
   useEffect(() => {
     if (!gameId) return;
